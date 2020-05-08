@@ -1,0 +1,11 @@
+
+@font-face { 
+font-family: Paint Peel MF Initials;
+src: url(15502.ttf); 
+}
+
+
+h1{
+	font-family: 'Paint Peel MF Initials' !important;
+	color: red !important;
+}

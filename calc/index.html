@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Калькулятор зарплат ГУК</title>
+	<meta name="description" content="Расчет зарплаты в нашей организации">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" >
+<!-- 	<?php include_once "calc.php"; ?> -->
+</head>
+<body>
+	<div class="container">
+		<header>
+			
+		</header>
+
+<main class="calc">
+	<form action="calc.php" method="POST">
+<!-- 		<legend>Исходные данные</legend> -->
+
+		<div class="page-header">
+  <h1>Калькулятор зарплаты <small><br><br>Введите исходные данные</small></h1>
+</div>
+
+		<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Размер оклада</span>
+  </div>
+		<input name="oklad" id="oklad" required pattern="^[ 0-9]+$" class="form-control"> <!--pattern добавить по числам-->
+</div>
+<br>
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Стаж работы</label>
+  </div>
+  <select name="staj" class="custom-select" id="inputGroupSelect01">
+	<option  value="1_staj">Менее 1 года</option><!-- 0% -->
+				<option  value="2_staj">Свыше 1 года</option><!-- 3% -->
+				<option selected value="3_staj">Свыше 3 лет</option><!-- 5% -->
+				<option value="4_staj">Свыше 5 лет </option><!-- 7% -->
+				<option value="5_staj">Свыше 10 лет и более</option><!-- 10% -->
+  </select>
+</div>
+
+
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Тип подразделения</label>
+  </div>
+  <select name="type_worker" class="custom-select" id="inputGroupSelect01">
+	<option selected value="nepro">Непроизводственное</option><!-- 40% -->
+			<option value="pro">Производственное</option> 
+  </select>
+</div>
+
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">Ранг</label>
+  </div>
+  <select name="rang" class="custom-select" id="inputGroupSelect01">
+				<option  value="1_rang" >6</option><!-- 40% -->
+				<option  value="2_rang" >7</option><!-- 48% -->
+				<option selected value="3_rang" >8</option><!-- 56% -->
+				<option value="4_rang">9 </option><!-- 64% -->
+				<option value="5_rang">10</option><!-- 72% -->
+				<option value="6_rang">11</option><!-- 80% -->
+  </select>
+</div>
+
+
+
+<button class="btn btn-primary btn-lg btn-block">Посчитать</button>
+
+
+
+	</form>
+
+</main>
+
+
+
+	</div>
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
